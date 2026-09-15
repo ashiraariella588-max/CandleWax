@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Candle Wax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Candle Wax</h1>
+
+    <img src="metal.png" alt="image of metal" class="img1">
+    <img src="metal.png" alt="image of metal" class="img2">
+    <img src="embossing.png" alt="image of metal" class="embossing">
+    <p>     ✦Say your burdens and God will give you rest.(Matthew 11:28)
+         <br>   ✦ Repent for your sins and ask for forgiveness. (1 John 1:9)
+           <br>  ✦ Ask for guidance and wisdom in your life. (James 1:5)
+            <br> ✦ Pray for your brothers and sisters, for those in need, and for the world. (1 Timothy 2:1-2)</br></p>
+
+    <textarea id="prayerInput" rows="10" cols="50"
+        placeholder="Write your prayer here.."></textarea>
+
+    <button onclick="addPrayer()">Submit Prayer</button>
+
+    <h2>Prayers</h2>
+
+    <div id="prayerList">
+        <h3>Your prayers can be shown here.</h3>
+    </div>
+
+    <h2>
+        The LORD is far from the wicked, but he hears the prayer of the righteous.
+        <br>
+        <b>Proverbs 15:29</b>
+    </h2>
+
+    <script>
+        function addPrayer() {
+            let prayer = document.getElementById("prayerInput").value;
+
+            if (prayer.trim() === "") {
+                alert("Please write a prayer first.");
+                return;
+            }
+
+            let paper = document.createElement("div");
+            paper.className = "prayer-envelope";
+
+            let prayerText = document.createElement("div");
+            prayerText.className = "prayer-paper";
+            prayerText.textContent = prayer;
+
+            paper.appendChild(prayerText);
+
+            document.getElementById("prayerList").appendChild(paper);
+
+            document.getElementById("prayerInput").value = "";
+        }
+    </script>
+
+</body>
+</html>
