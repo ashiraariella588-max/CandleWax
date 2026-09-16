@@ -1,0 +1,169 @@
+body {
+    background-color: #800020;
+    font-family: Baskerville, serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 110px 130px;
+    box-sizing: border-box;
+    
+    position: relative;
+}
+
+h1 {
+    text-align: left;
+    font-family: "Old English Text MT", serif;
+    letter-spacing: -2px;
+    font-size: 100px;
+    color: rgb(252, 252, 251);
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px #310101;
+
+    margin: 20px auto 30px auto;
+}
+p {
+    font-family: Baserville, serif;
+    font-size: 18px;
+    color:rgb(96, 218, 255);
+}
+
+textarea {
+    font-family: "Anderson Signature", serif;
+    font-size: 16px;
+    color: rgb(128, 117, 22);
+    background-color: rgb(54, 1, 1);
+    text-align: left;
+    width: 100%;
+    max-width: 1000px;
+    height: 200px;
+    border-style: double;
+    border-width: 10px;
+    border-color: rgb(128, 117, 22);
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    font-family: Baskerville, serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #38010e;
+    border-style: ridge;
+    border-color: rgb(128, 117, 22);
+    border-width: 10px;
+    color: rgb(128, 117, 22);
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    height: auto;
+    cursor: pointer;
+    position: static;
+    margin-left: 0;
+    display: block;
+}
+
+h2,h3 {
+    font-family: "Old English Text MT", serif;
+    text-align: left;
+    color: rgb(96, 218, 255);
+    letter-spacing: 1px;
+}
+.img1 {
+   position: absolute;
+    top: 170px;
+    left: -110px;
+
+    width: 400px;
+    height: 560px;
+}
+.img2 {
+    position: absolute;
+    top: 170px;
+    right: -70px;
+    width: 400px;
+    height: 560px;
+    transform: scaleX(-1);
+}
+.embossing {
+position: absolute;
+    top: 40px;
+    height: 200px;
+    left: 29%;
+    transform: translateX(-50%);
+    width: 40%;
+    max-width: 1200px;
+    display: block;
+}
+#prayerList {
+    width: 90%;
+    margin: 40px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    justify-content: flex-start;
+}
+
+.prayer-envelope {
+    position: relative;
+    width: 220px;
+    height: 150px;
+
+    padding: 25px 18px 15px 18px;
+    box-sizing: border-box;
+
+    background-color: #f8ecd8;
+    border: 2px solid #8b6b43;
+
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: width 0.4s ease,
+                height 0.4s ease,
+                transform 0.3s ease;
+}
+
+.prayer-envelope::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 24px,
+        #817868 25px
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.prayer-paper {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    color: #33302d;
+    font-family: Baskerville, serif;
+    font-size: 15px;
+    line-height: 25px;
+
+    overflow-y: auto;
+}
+
+.prayer-envelope:hover {
+    width: 270px;
+    height: 200px;
+    transform: translateY(-6px) rotate(-1deg);
+}
